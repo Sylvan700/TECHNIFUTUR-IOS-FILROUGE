@@ -1,24 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TECHNIFUTUR_IOS_FILROUGE" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GYb-F0-2x7">
+                                <rect key="frame" x="0.0" y="602" width="428" height="324"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="center" axis="vertical" distribution="fillProportionally" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Mse-dd-oIN">
+                                        <rect key="frame" x="20" y="20" width="388" height="264"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="center" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="... ton email" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="EDw-h9-fyQ">
+                                                <rect key="frame" x="0.0" y="0.0" width="388" height="84.666666666666671"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" textContentType="email"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="center" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="... ton mot de passe" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="Gsh-cV-yzn">
+                                                <rect key="frame" x="0.0" y="92.666666666666629" width="388" height="82"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES" textContentType="password"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="72B-N3-ltO">
+                                                <rect key="frame" x="0.0" y="182.66666666666663" width="388" height="81.333333333333314"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Se connecter">
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
+                                                    <color key="baseBackgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="connectButtonIsTouchUpIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ofm-va-Och"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Mse-dd-oIN" secondAttribute="bottom" constant="40" id="82F-yE-V51"/>
+                                    <constraint firstItem="Mse-dd-oIN" firstAttribute="leading" secondItem="GYb-F0-2x7" secondAttribute="leading" constant="20" id="PHL-z5-DrD"/>
+                                    <constraint firstItem="Mse-dd-oIN" firstAttribute="top" secondItem="GYb-F0-2x7" secondAttribute="top" constant="20" id="RcR-kq-kNq"/>
+                                    <constraint firstAttribute="trailing" secondItem="Mse-dd-oIN" secondAttribute="trailing" constant="20" id="fln-r1-TF0"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GYb-F0-2x7" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="0L5-F3-Luf"/>
+                            <constraint firstAttribute="bottom" secondItem="GYb-F0-2x7" secondAttribute="bottom" id="7Dm-j9-Q2s"/>
+                            <constraint firstItem="GYb-F0-2x7" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.35" id="Qcp-uy-l2P"/>
+                            <constraint firstItem="GYb-F0-2x7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ki2-nP-ggI"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="enterEmailTextField" destination="EDw-h9-fyQ" id="Zsq-iH-nwc"/>
+                        <outlet property="enterPasswordTextField" destination="Gsh-cV-yzn" id="eZS-uf-nwo"/>
+                        <outlet property="stackofMailAndPswd" destination="Mse-dd-oIN" id="CCe-ep-rY3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-17.39130434782609" y="83.705357142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

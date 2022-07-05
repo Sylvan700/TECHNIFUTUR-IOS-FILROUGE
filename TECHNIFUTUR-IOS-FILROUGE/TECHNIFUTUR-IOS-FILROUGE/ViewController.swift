@@ -7,13 +7,36 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController
+{
+    // Objects reference
+    @IBOutlet var enterEmailTextField: UITextField!
+    @IBOutlet var enterPasswordTextField: UITextField!
+    @IBOutlet var stackofMailAndPswd: UIStackView!
 
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        // Close Keyboard
+        let tapOnView = UITapGestureRecognizer(target: view, action:
+        #selector(UIView.endEditing))
+        view.addGestureRecognizer(tapOnView)
+        
+        enterEmailTextField.delegate = self
+        enterPasswordTextField.delegate = self
     }
 
-
+    // Objects functions
+    @IBAction func connectButtonIsTouchUpIn(_ sender: Any)
+    {
+    }
+    
 }
 
+extension ViewController: UITextFieldDelegate {
+func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    view.endEditing(true)
+    return true
+}
+}
